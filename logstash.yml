@@ -4,7 +4,7 @@
   vars:
     logstash_ssl_certificate_file: myssl.crt
     logstash_ssl_key_file: myssl.key
-    logstash_forwarder_port: 6000
+    logstash_forwarder_port: 12345
 
   roles:
     - {role: logstash }

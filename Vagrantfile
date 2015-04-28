@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
 
 	config.vm.define "logstash" do |logstash|
 		logstash.vm.hostname = "logstash"
-		logstash.vm.box = "hashicorp/precise64"
+		logstash.vm.box = "chef/ubuntu-14.04"
 		logstash.vm.provision :ansible do |ansible|
 			ansible.playbook = "logstash.yml"
 		end
