@@ -15,12 +15,17 @@ Vagrant.configure(2) do |config|
 		server.vm.network "private_network", ip: "192.168.50.4"
 	end
 
-	config.vm.define "logstash-server" do |logstash|
-		logstash.vm.hostname = "logstash-server"
+	config.vm.define "logstash" do |logstash|
+		logstash.vm.hostname = "logstash"
 		logstash.vm.box = "hashicorp/precise64"
 		logstash.vm.provision :ansible do |ansible|
 			ansible.playbook = "logstash.yml"
 		end
+		
+		logstash.vm.provider "vmware_fusion" do |v|
+			v.vmx["memsize"] = "2048"
+		end
+
 		logstash.vm.network "private_network", ip: "192.168.50.5"
 	end
 
@@ -32,5 +37,4 @@ Vagrant.configure(2) do |config|
 		end
 		client.vm.network "private_network", ip: "192.168.50.6"
 	end
-
 end
