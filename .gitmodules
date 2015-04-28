@@ -1,0 +1,15 @@
+[submodule "roles/logstash"]
+	path = roles/logstash
+	url = git@github.com:gotansible/logstash
+[submodule "roles/logstash-forwarder"]
+	path = roles/logstash-forwarder
+	url = git@github.com:gotansible/logstash-forwarder
+[submodule "roles/consul"]
+	path = roles/consul
+	url = git@github.com:gotansible/consul
+[submodule "roles/bakins.runit"]
+	path = roles/bakins.runit
+	url = git@github.com:bakins/ansible-runit
+[submodule "roles/williamyeh.oracle-java"]
+	path = roles/williamyeh.oracle-java
+	url = git@github.com:William-Yeh/ansible-oracle-java

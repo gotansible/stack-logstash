@@ -1,0 +1,12 @@
+---
+- hosts: all
+  sudo: true
+  vars:
+    logstash_ssl_certificate_file: myssl.crt
+    logstash_ssl_key_file: myssl.key
+    logstash_forwarder_port: 6000
+
+  roles:
+    - {role: logstash }
+
+
